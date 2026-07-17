@@ -8,6 +8,11 @@
 
 - Preparing source documents for RAG may require curation and redaction, not just format conversion, because sensitive or irrelevant content can hurt both safety and retrieval quality.
 
+- Chunking is a core part of RAG, not just preprocessing, because retrieval depends on whether the source material is broken into useful, focused pieces.
+  Smaller chunks improve retrieval precision, but if they are too small they can lose important context.
+
+- Overlap helps preserve continuity between chunks so ideas are less likely to be split too abruptly across chunk boundaries.
+
 ## RAG vs other approaches
 
 - RAG makes sense when the model needs grounded answers from source documents rather than relying on general knowledge.
