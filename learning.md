@@ -13,6 +13,14 @@
 
 - Overlap helps preserve continuity between chunks so ideas are less likely to be split too abruptly across chunk boundaries.
 
+- For a small local prototype, it can make sense to delay persisting embeddings until retrieval works end to end, because that keeps the system easier to understand and debug.
+
+- The “generation” part of RAG should still be tightly grounded in retrieved context; retrieval alone is not enough if the prompt allows the model to drift beyond the sources.
+
+- Showing supporting chunks alongside the final answer makes it easier to debug whether a weak result came from retrieval or from generation.
+
+- RAG makes sense when the goal is to answer from document-based knowledge, while a skill or tool makes more sense when the model needs to take an action or fetch live structured data.
+
 ## RAG vs other approaches
 
 - RAG makes sense when the model needs grounded answers from source documents rather than relying on general knowledge.
